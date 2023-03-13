@@ -119,7 +119,8 @@ body {
 }
 
 #moon{padding: 20px;
-margin-right: 15%;}
+margin-right: 15%;
+cursor: pointer;}
 
 @media screen and (max-width: 600px){
     .footer p{font-size: 13px;
@@ -622,7 +623,7 @@ ul{list-style-type: none;}
 
 .days li .active {
     padding: 5px;
-    background: #d3a461;
+    background: #c8954d;
     cursor: not-allowed;
     color: white !important
   }
@@ -675,4 +676,327 @@ li.no{
         margin-top: 30px;
         margin-bottom: 60px;
     }
+
+    #anatomy{display: none;}
+    #yinspiration{display: none;}
   }
+
+#anatomy{
+    visibility: hidden;
+    min-width: 250px;
+    color: #ffffff;
+    background-color: #d3a461;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    font-size: 16px;
+    left: 12%;
+    bottom: 200px;
+}
+
+#anatomy.show{
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 190px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 190px; opacity: 1;}
+  }
+
+#yinspiration{
+    visibility: hidden;
+    min-width: 250px;
+    color: #ffffff;
+    background-color: #d3a461;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    font-size: 16px;
+    right: 12%;
+    bottom: 190px;
+}
+
+#yinspiration.show{
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 180px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 180px; opacity: 1;}
+  }
+
+/*mbaroi schedule*/
+
+.cards{display: inline-flex;}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 150%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    background-color: #f5ddd3;
+    color: #d3a461;
+    transform: rotateY(180deg);
+    font-family: 'Poppins',sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+ @media screen and (max-width: 600px){
+    .flip-card-front img{width: 250px;
+        height: 200px;
+    }
+    .flip-card{
+        width: 250px;
+        height: 200px;
+    }
+    .flip-card-back h2{
+        font-size: 18px;
+    }
+    .flip-card-back p{
+        font-size: 10px;
+    }
+    .cards{display: list-item;}
+ }
+
+/*mbaroi events*/
+
+.inv{
+    float: left;
+    width: 33%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    margin-left: 150px;
+}
+
+@media screen and (max-width: 650px){
+    .inv{
+        width: 95%;
+        display: block;
+        margin-left: 0;
+    }
+}
+
+.invest{
+    box-shadow: 0 4px 8px 0 #d3a461;
+}
+
+.invest-card{
+    padding: 0 16px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.invest-card h2{color: #c8954d;}
+.title {
+    color: #77797c!important
+}
+.invest-card p{color: #d3a461;}
+
+.invest-card::after, .rradha::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.investment{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: #ffffff;
+    background-color: #d3a461;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+}
+
+.investment:hover{
+    opacity: 0.8;
+}
+
+/*investment mbaroi*/
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: #b3c3b9;
+    font: 16px;
+}
+
+input[type=submit]{
+    background-color: #ffffff;
+    color: #b3c3b9;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+#programs{
+    background-color: #ffffff!important;
+    color: #b3c3b9;
+    cursor: pointer;
+}
+
+.contact{
+    border-radius: 5px;
+    background-color: #b3c3b9;
+    padding: 20px;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 18px;
+}
+
+#gif3{
+    position: absolute;
+    top: 125%;
+    left: 6%;
+    height: 30%;
+}
+
+@media screen and (max-width: 650px){
+    .contact{margin-left: 18%;
+    }
+    #gif3{top: 147%;
+        height: 25%;
+        left: 2%;
+    }
+}
+
+/*mbaroi contact page*/
+
+#gif{
+    margin-left: 41px;
+}
+
+#thenie{
+    color: #d3a461;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 50px;
+    margin-right: 70%;
+    text-align: center;
+    line-height: 20px;
+    word-spacing: 2px;
+    opacity: 0.9;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
+    position: absolute;
+    top: 36%;
+    left: 5%;
+}
+
+@media screen and (max-width: 650px){
+    .siper{display:none}
+    #gif{display: none;}
+}
+
+.bookClass{
+    border-radius: 5px;
+    background-color: #d3a461;
+    padding: 20px;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    width: 50%;
+    font-size: 18px;
+    position: absolute;
+    top: 19%;
+    right: 5%;
+    padding-bottom: 2%;
+}
+
+.bookClass input{
+    background-color: #d3a461;
+}
+
+#sub{
+    background-color: #ffffff;
+    color: #d3a461;
+}
+
+#program{
+    background-color: #ffffff;
+    color: #d3a461;
+    cursor: pointer;
+}
+
+#gif2{
+    position: absolute;
+    top: 105%;
+    right: 42%;
+}
+
+@media screen and (max-width: 650px){
+    .bookClass{position: relative;
+        left: 19%;
+    }
+    #gif2{
+        top: 120%;
+        right: 47%;
+    }
+}
+
+/*mbaroi book class page*/
